@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function RightMenu() {
-  return (
-    <div>RightMenu</div>
-  )
+  return <div>RightMenu</div>;
 }
 
-export {RightMenu}
+export { RightMenu };

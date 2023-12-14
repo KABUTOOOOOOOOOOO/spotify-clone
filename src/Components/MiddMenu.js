@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function MiddMenu() {
-  return (
-    <div>MiddMenu</div>
-  )
+  return <div>MiddMenu</div>;
 }
-    
-export {MiddMenu}
+
+export { MiddMenu };
