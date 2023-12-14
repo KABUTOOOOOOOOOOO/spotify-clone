@@ -21,7 +21,7 @@ function PlayListMenu() {
               <i className="list">
                 <RiPlayListLine />
               </i>
-              <p>Sample name</p>
+              <p>{list.name}</p>
               <i className="trash">
                 <IoMdTrash />
               </i>

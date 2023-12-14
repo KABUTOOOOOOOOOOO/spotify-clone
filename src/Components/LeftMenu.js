@@ -2,12 +2,12 @@ import React from "react";
 import { Menu } from "./Menu";
 import "../Styles/LeftMenu.css";
 import { MenuList } from "./MenuList";
+import { PlayListMenu } from "./PlayListMenu";
+import { TrackList } from "./TrackList";
 
 import { ImSpotify } from "react-icons/im";
 import { IoEllipsisHorizontalSharp } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
-import { PlayListMenu } from "./PlayListMenu";
-import { TrackList } from "./TrackList";
 
 function LeftMenu() {
   return (
