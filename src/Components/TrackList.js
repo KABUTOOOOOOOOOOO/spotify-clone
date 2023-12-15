@@ -19,8 +19,8 @@ function TrackList() {
       <div className="top">
         <img src={TrackLogo} alt="" />
         <p className="trackName">
-          Let U Go
-          <span className="trackSpan">lucidbeatz</span>
+          Reminder
+          <span className="trackSpan">The Weekend</span>
         </p>
       </div>
       <div className="bottom">
