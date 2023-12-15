@@ -6,7 +6,7 @@
     backdrop-filter: blur(10px);
     padding: 20px 15px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0,.97,.97,-0.36);
 }
 
 .leftMenu .logoContainer{
@@ -182,10 +182,11 @@
 }
 
 .playListContainer .playListScroll .playlist p{
-    font-size: 16px;
+    font-size: 19px;
     text-overflow:ellipsis;
     overflow: hidden;
     display: inline;
+    font:bold;
 }
 
 .trackList{
@@ -205,13 +206,13 @@
 .trackList .top .trackName{
     margin-left: 15px;
     color: #f1f1f1;
-    font-size: 14px;
+    font-size: 20px;
 
 }
 
 .trackList .top .trackName .trackSpan{
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     color: #848484;
 }
 
@@ -224,7 +225,7 @@
 }
 
 .trackList .bottom i{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .trackList .bottom i:hover{
@@ -273,3 +274,30 @@
     transition: all 250ms linear;
 }
 
+@media screen and (max-width: 550px) {
+    .leftMenu{
+        width: 64px;
+        min-width: 64px;
+    }
+    .leftMenu .searchBox{
+        display: none;
+    }
+    .leftMenu .trackList{
+        display: none;
+    }
+    .leftMenu .playListContainer{
+        display: none;
+    }
+    .leftMenu .MenuContainer ul li a span{
+        display: none;
+    }
+    .leftMenu .MenuContainer ul li a i{
+        font-size: 26px;
+    }
+    .leftMenu .MenuContainer ul li {
+        margin: 20px 0;
+    }
+    .leftMenu .logoContainer h2{
+        margin-left: 20px;
+    }
+}

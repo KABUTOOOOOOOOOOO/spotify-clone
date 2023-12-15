@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiVolumeUp } from "react-icons/hi";
 import { BsMusicNoteList } from "react-icons/bs";
 import { LuMonitorSpeaker } from "react-icons/lu";
+/*import {
+  FaBackwardStep,
+  FaForwardStep,
+  FaPause,
+  FaPlay,
+} from "react-icons/fa6";*/
 
 import TrackLogo from "../assets/track.jpg";
 
 function TrackList() {
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
     <div className="trackList">
       <div className="top">
