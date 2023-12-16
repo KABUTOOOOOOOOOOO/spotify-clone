@@ -7,91 +7,93 @@ import { FaRegClock } from "react-icons/fa";
 import { PiHeartStraight } from "react-icons/pi";
 import { PiHeartStraightFill } from "react-icons/pi";
 
-function AudioList() {
+const AudioList = () => {
   const [songs, setSongs] = useState(TheWeekendSongs);
   const [song, setSong] = useState(songs[0].song);
   const [img, setImage] = useState(songs[0].imgSrc);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [auto, setAuto] = useState(false);
 
   useEffect(() => {
-    const songs = document.querySelectorAll(".songs");
-    function changeMenuActive(index) {
-      setActiveIndex(index);
+    const allSongs = document.querySelectorAll(".songs");
+    function changeActive() {
+      allSongs.forEach((n) => n.classList.remove("active"));
+      this.classList.add("active");
     }
-    songs.forEach((n, index) =>
-      n.addEventListener("click", () => changeMenuActive(index))
-    );
+
+    allSongs.forEach((n) => n.addEventListener("click", changeActive));
+
     return () => {
-      songs.forEach((n, index) =>
-        n.removeEventListener("click", () => changeMenuActive(index))
-      );
+      allSongs.forEach((n) => n.removeEventListener("click", changeActive));
     };
   }, []);
 
   const changeFavourite = (id) => {
     setSongs((prevSongs) =>
-      prevSongs.map((song) =>
-        song.id === id ? { ...song, favourite: !song.favourite } : song
+      prevSongs.map((s) =>
+        s.id === id ? { ...s, favourite: !s.favourite } : s
       )
     );
   };
 
-  const setMainSample = (selectedSong, imgSrc) => {
-    setSongs((prevSongs) => {
-      const newSongs = [...prevSongs];
-      newSongs.splice(activeIndex, 1, selectedSong);
-      return newSongs;
-    });
+  const setMainSample = (songSrc, imgSrc) => {
+    setSong(songSrc);
     setImage(imgSrc);
+    setAuto(true);
   };
 
   return (
-    <div className="audioList">
+    <div className="AudioList">
       <h2 className="title">
-        The List <span>{`${songs.length} songs`}</span>
+        The list <span>{TheWeekendSongs.length} songs</span>
       </h2>
+
       <div className="songsContainer">
         {songs &&
-          songs.map((sample, index) => (
+          songs.map((song, index) => (
             <div
-              className={`songs${index === activeIndex ? " active" : ""}`}
-              key={sample?.id}
-              onClick={() => setMainSample(sample, sample?.imgSrc)}
+              className="songs"
+              key={song?.id}
+              onClick={() => setMainSample(song?.song, song?.imgSrc)}
             >
-              <div className="count">{`#${index + 1}`}</div>
-              <div className="sample">
+              <div className="count">
+                <p>{`#${index + 1}`}</p>
+              </div>
+              <div className="song">
                 <div className="imgBox">
-                  <img src={sample?.imgSrc} alt="" />
+                  <img src={song?.imgSrc} alt="" />
                 </div>
                 <div className="section">
-                  <p className="sampleName">
-                    {sample?.songName}
-                    <span className="spanArtist">{sample?.artist}</span>
+                  <p className="songName">
+                    {song?.songName}{" "}
+                    <span className="songSpan">{song?.artist}</span>
                   </p>
+
                   <div className="hits">
                     <p className="hit">
                       <i>
                         <LiaHeadphonesAltSolid />
-                        2,245,872,098
                       </i>
+                      {song?.auitions}
                     </p>
+
                     <p className="duration">
+                      {" "}
                       <i>
                         <FaRegClock />
                       </i>
-                      03:04
+                      {song?.songDur}
                     </p>
                     <div
                       className="favourite"
-                      onClick={() => changeFavourite(sample?.id)}
+                      onClick={() => changeFavourite(song?.id)}
                     >
-                      {sample?.favourite ? (
+                      {song?.favourite ? (
                         <i>
-                          <PiHeartStraightFill />
+                          <PiHeartStraight />
                         </i>
                       ) : (
                         <i>
-                          <PiHeartStraight />
+                          <PiHeartStraightFill />
                         </i>
                       )}
                     </div>
@@ -101,9 +103,10 @@ function AudioList() {
             </div>
           ))}
       </div>
-      <MusicPlayer song={song} imgSrc={img} />
+
+      <MusicPlayer song={song} imgSrc={img} autoplay={auto} />
     </div>
   );
-}
+};
 
 export { AudioList };
