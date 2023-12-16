@@ -1,3 +1,4 @@
+import { AudioList } from "./AudioList";
 import React, { useState } from "react";
 import "../Styles/MiddMenu.css";
 import { Banner } from "./Banner";
@@ -49,6 +50,7 @@ function MiddMenu() {
           <span> Followers</span>
         </div>
       </div>
+      <AudioList />
     </div>
   );
 }

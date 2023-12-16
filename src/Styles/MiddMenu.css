@@ -217,3 +217,112 @@
     color: #848484;
     margin-left: 6px;
 }
+
+/*Audio list styles*/
+.audioList{
+    padding: 10px 30px;
+}
+
+.audioList .title{
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+.audioList .title span{
+    color: #848484;
+    font-size: 12px;
+}
+
+.songsContainer{
+    height: 220px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.songs{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #848484;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.songs:hover, 
+.songs.active{
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.count{
+    margin-right: 10px;
+}
+
+.sample{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+
+.sample .imgBox{
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 0.5em;
+    background: #555;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.sample .imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sample .section{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sample .section .sampleName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.sample .section .hits{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sample .section .hits .hit,
+.sample .section .hits .duration{
+    margin-right: 15px;
+}
+
+.sample .section .hits .hit i{
+    font-size: 14px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+}
+
+.sample .section .hits .duration i{
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.sample .section .hits .favourite i{
+    color: #848484;
+    filter: drop-shadow(0px 0px 4px #f1f1f1);
+}
