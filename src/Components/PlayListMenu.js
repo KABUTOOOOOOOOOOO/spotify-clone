@@ -22,9 +22,7 @@ function PlayListMenu() {
                 <RiPlayListLine />
               </i>
               <p>{list.name}</p>
-              <i className="trash">
-                <IoMdTrash />
-              </i>
+              <i className="trash"></i>
             </div>
           ))}
       </div>

@@ -1,0 +1,101 @@
+.library{
+    height: 100vh;
+    z-index: 1;
+    flex-grow: 1;   
+}
+
+.library .head{
+    padding: 25px;
+    color: #f1f1f1;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Gill Sans MT';
+    background: rgba(32, 32, 32, 0.6);
+    backdrop-filter: blur(10px);
+
+}
+
+.library .mainPlayLists{
+    height: 210px;
+    background: rgba(34, 34, 34, 0.6);
+    backdrop-filter: blur(10px);
+    
+}
+
+.library .mainPlayLists .yourPlaylist{
+    font-size: 20px;
+    display: flex;
+    padding-left: 25px;
+    color: #f1f1f1;
+    margin: 1px 2px;
+    font-weight: 700;
+}
+
+.library .mainPlayLists .yourPlaylist p{
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.playLists {
+    padding: 25px;
+    margin-left: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.playlistItem {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+
+.playlistItem img {
+
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.playlistItem p {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.playLists {
+    padding: 25px;
+    margin-left: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.playlistItem {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    border-radius: 8px;
+    overflow: hidden; 
+    transition: background 0.3s ease;
+    cursor: pointer; 
+}
+
+.playlistItem:hover {
+    background: rgba(211, 211, 211, 0.3); 
+}
+
+.playlistItem img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.playlistItem p {
+    color: #f1f1f1;
+    font-size: 16px;
+    font-weight: bold;
+}
