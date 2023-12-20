@@ -1,0 +1,50 @@
+.artists {
+    height: 100vh;
+    z-index: 1;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  .artists {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .artists h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .artists ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .artists li {
+    width: 250px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .artists h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .artists p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .artists img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  

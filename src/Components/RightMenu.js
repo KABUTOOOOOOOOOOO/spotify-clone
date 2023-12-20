@@ -17,10 +17,6 @@ function RightMenu() {
         <i>
           <FaBell />
         </i>
-
-        <i>
-          <FaRegHeart />
-        </i>
       </div>
       <div className="profile">
         <i>

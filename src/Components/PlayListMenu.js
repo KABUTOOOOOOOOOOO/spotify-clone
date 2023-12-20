@@ -10,9 +10,6 @@ function PlayListMenu() {
     <div className="playListContainer">
       <div className="nameContainer">
         <p>PlayList</p>
-        <i>
-          <GrAdd />
-        </i>
       </div>
       <div className="playListScroll">
         {PlayList &&
@@ -22,7 +19,6 @@ function PlayListMenu() {
                 <RiPlayListLine />
               </i>
               <p>{list.name}</p>
-              <i className="trash"></i>
             </div>
           ))}
       </div>

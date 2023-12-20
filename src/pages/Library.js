@@ -80,24 +80,24 @@ const Library = () => {
         </div>
       </div>
 
-      {albumsData.map((albumData) => (
-        <div key={albumData.id} className="albumData">
-          <img src={albumData.images[0].url} alt={albumData.name} />
-          <p>Album:</p>
-          {albumData.name && <p>Album Name: {albumData.name}</p>}
-          {albumData.artists && (
-            <p>
-              Artist:{" "}
-              {albumData.artists.map((artist) => artist.name).join(", ")}
-            </p>
-          )}
-          {albumData.release_date && (
-            <p>Date of Release: {albumData.release_date}</p>
-          )}
-          {albumData.total_tracks && <p>Songs: {albumData.total_tracks}</p>}
-          {/* Добавьте другие поля альбома по вашему усмотрению */}
-        </div>
-      ))}
+      <div className="albumData-container">
+        {albumsData.map((albumData) => (
+          <div key={albumData.id} className="albumData">
+            <img src={albumData.images[0].url} alt={albumData.name} />
+            {albumData.name && <p>Album Name: {albumData.name}</p>}
+            {albumData.artists && (
+              <p>
+                Artist:{" "}
+                {albumData.artists.map((artist) => artist.name).join(", ")}
+              </p>
+            )}
+            {albumData.release_date && (
+              <p>Date of Release: {albumData.release_date}</p>
+            )}
+            {albumData.total_tracks && <p>Songs: {albumData.total_tracks}</p>}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

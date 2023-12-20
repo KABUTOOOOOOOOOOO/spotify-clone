@@ -13,7 +13,7 @@ const Playlists = [
   },
   {
     id: 3,
-    playListName: "Your Songs",
+    playListName: "My favourites",
     imgSrc:
       "https://firebasestorage.googleapis.com/v0/b/billieeilish-1ea44.appspot.com/o/images%2Fpexels-eberhard-grossgasteiger-691668.jpg?alt=media&token=24f4b3e8-7588-43c6-ac17-ab4542c1383e",
   },
