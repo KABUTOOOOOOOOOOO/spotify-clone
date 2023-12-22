@@ -56,15 +56,20 @@ function Artists() {
       <h1>Artists</h1>
       <ul>
         {artists.map((artist) => (
-          <li key={artist.id}>
-            <h3>{artist.name}</h3>
-            <p>Followers: {artist.followers.total}</p>
-            <div>
-              {artist.images.length > 0 && (
-                <img src={artist.images[0].url} alt={`Artist ${artist.name}`} />
-              )}
-            </div>
-          </li>
+          <div className="artistsData">
+            <li key={artist.id}>
+              <h3>{artist.name}</h3>
+              <p>Followers: {artist.followers.total}</p>
+              <div>
+                {artist.images.length > 0 && (
+                  <img
+                    src={artist.images[0].url}
+                    alt={`Artist ${artist.name}`}
+                  />
+                )}
+              </div>
+            </li>
+          </div>
         ))}
       </ul>
     </div>

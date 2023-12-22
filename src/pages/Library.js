@@ -79,15 +79,15 @@ const Library = () => {
           ))}
         </div>
       </div>
-
+      <div className="forYou">Only for You!</div>
       <div className="albumData-container">
         {albumsData.map((albumData) => (
           <div key={albumData.id} className="albumData">
             <img src={albumData.images[0].url} alt={albumData.name} />
-            {albumData.name && <p>Album Name: {albumData.name}</p>}
+            {albumData.name && <p>Playlist Name: {albumData.name}</p>}
             {albumData.artists && (
               <p>
-                Artist:{" "}
+                Created by:{" "}
                 {albumData.artists.map((artist) => artist.name).join(", ")}
               </p>
             )}

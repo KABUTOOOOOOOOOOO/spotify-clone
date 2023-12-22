@@ -14,7 +14,6 @@
     font-family: 'Gill Sans MT';
     background: rgba(32, 32, 32, 0.6);
     backdrop-filter: blur(10px);
-
 }
 
 .library .mainPlayLists{
@@ -110,9 +109,7 @@
 }
 
 .albumData {
-    margin-top: 20px;
     padding: 15px;
-    background: rgba(32, 32, 32, 0.6);
     border-radius: 8px;
     overflow: hidden;
     transition: background 0.3s ease;
@@ -143,4 +140,28 @@
     margin-bottom: 10px;
   }
   
+  .library .forYou {
+    padding: 25px;
+    color: #f1f1f1;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Gill Sans MT';
+    background: rgba(34, 34, 34, 0.6);
+  }
+
+  .albumData-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background: rgba(34, 34, 34, 0.6); 
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+
+  }
   
+  .albumData {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }

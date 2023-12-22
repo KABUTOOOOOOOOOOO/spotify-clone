@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MiddMenu />} />
         <Route path="/library" element={<Library />} />
-        <Route path="/artist" element={<Artists />} />
+        <Route path="/artists" element={<Artists />} />
       </Routes>
       <RightMenu />
 

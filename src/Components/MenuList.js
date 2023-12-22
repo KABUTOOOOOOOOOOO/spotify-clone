@@ -20,20 +20,14 @@ const MenuList = [
   {
     id: 3,
     icon: <BiSolidMicrophoneAlt />,
-    name: "Artist",
-    path: "/artist",
+    name: "Artists",
+    path: "/artists",
   },
   {
     id: 4,
     icon: <BiAlbum />,
     name: "Albums",
     path: "/albums",
-  },
-  {
-    id: 5,
-    icon: <IoIosRadio />,
-    name: "Radio",
-    path: "/radio",
   },
 ];
 
