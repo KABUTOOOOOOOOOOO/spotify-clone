@@ -8,7 +8,7 @@ function Artists() {
   useEffect(() => {
     const fetchData = async () => {
       const clientId = "a5df27b1278d4ca5970f3e3ee528d458";
-      const clientSecret = "0b044f4d73394d97b0cc9adb6933136d";
+      const clientSecret = "a62e61dc53284924add66d719335144f";
 
       // Запрос на получение токена
       const authResponse = await axios.post(
@@ -24,7 +24,6 @@ function Artists() {
 
       const accessToken = authResponse.data.access_token;
 
-      // Запрос к API Spotify с использованием токена
       const artistIds = [
         "2CIMQHirSU0MQqyYHq0eOx",
         "57dN52uHvrHOxijzpIgu3E",

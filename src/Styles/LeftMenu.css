@@ -17,11 +17,56 @@
     justify-content: space-between;
 }
 
+.leftMenu .dropdownMenu {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: #333;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    color: #fff;
+    width: 100px; 
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .leftMenu .dropdownMenu button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    align-items: center;
+    display: flex;
+  }
+  
+  .leftMenu .dropdownMenu button:hover {
+    background-color: #555;
+  }
+  
+  .leftMenu .dropdownMenu button i {
+    margin-left: 6px;
+    font-size: 18px; 
+    color: #848484; 
+    transition: color 0.3s ease-in-out; 
+    padding-top: 4px;
+  }
+  
+  .leftMenu .dropdownMenu button:hover i {
+    color: #fff; 
+  }
+
 .leftMenu .logoContainer i {
     font-size: 30px;
 }
 .leftMenu .logoContainer i:nth-of-type(2) {
     font-size: 20px !important;
+    cursor: pointer;
 }
 
 .leftMenu .logoContainer h2 {
@@ -247,7 +292,7 @@
     appearance: none;
 }
 
-/*Chrome & other Brwosers*/
+
 .trackList .bottom input::before{
     position: absolute;
     content: "";

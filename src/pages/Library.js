@@ -11,7 +11,7 @@ const Library = () => {
     const getClientCredentialsToken = async () => {
       try {
         const clientId = "a5df27b1278d4ca5970f3e3ee528d458";
-        const clientSecret = "0b044f4d73394d97b0cc9adb6933136d";
+        const clientSecret = "a62e61dc53284924add66d719335144f";
 
         const base64Auth = btoa(`${clientId}:${clientSecret}`);
 

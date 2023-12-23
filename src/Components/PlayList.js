@@ -1,19 +1,27 @@
 const PlayList = [
   {
     id: 1,
-    name: "Billie Eilish",
-  },
-  {
-    id: 2,
     name: "The Weekend",
   },
   {
+    id: 2,
+    name: "Billie Eilish",
+  },
+  {
     id: 3,
-    name: "Phonk",
+    name: "My Favourites",
   },
   {
     id: 4,
-    name: "My Favourites",
+    name: "Your Top 2023",
+  },
+  {
+    id: 4,
+    name: "lucidbeatz",
+  },
+  {
+    id: 4,
+    name: "speed up songs",
   },
 ];
 

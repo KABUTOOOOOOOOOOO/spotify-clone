@@ -18,7 +18,7 @@ function MiddMenu() {
         <ul>
           <li className={activeTab === "Popular" ? "active" : ""}>
             <a href="#" onClick={() => handleTabClick("Popular")}>
-              Popular
+              Songs
             </a>
           </li>
           <li className={activeTab === "Albums" ? "active" : ""}>
@@ -29,11 +29,6 @@ function MiddMenu() {
           <li className={activeTab === "Songs" ? "active" : ""}>
             <a href="#" onClick={() => handleTabClick("Songs")}>
               Songs
-            </a>
-          </li>
-          <li className={activeTab === "Fans" ? "active" : ""}>
-            <a href="#" onClick={() => handleTabClick("Fans")}>
-              Fans
             </a>
           </li>
           <li className={activeTab === "About" ? "active" : ""}>

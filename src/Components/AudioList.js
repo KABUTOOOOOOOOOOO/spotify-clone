@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { TheWeekendSongs } from "./TheWeekend";
-import { MusicPlayer } from "./MusicPlayer";
-
 import { LiaHeadphonesAltSolid } from "react-icons/lia";
 import { FaRegClock } from "react-icons/fa";
 import { PiHeartStraight } from "react-icons/pi";
 import { PiHeartStraightFill } from "react-icons/pi";
+import { MusicPlayer } from "./MusicPlayer";
+import { TheWeekendSongs } from "../Components/TheWeekend.js";
 
 const AudioList = () => {
   const [songs, setSongs] = useState(TheWeekendSongs);
-  const [song, setSong] = useState(songs[0].song);
-  const [img, setImage] = useState(songs[0].imgSrc);
+  const [song, setSong] = useState(songs[0]?.song);
+  const [img, setImage] = useState(songs[0]?.imgSrc);
   const [auto, setAuto] = useState(false);
 
   useEffect(() => {
